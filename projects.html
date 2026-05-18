@@ -20,65 +20,181 @@
     </nav>
 
     <main>
-        <h1>My Projects</h1>
-        <p class="section-subtitle">Here are some of my favorite coding projects. Check them out on GitHub!</p>
+        <h1>My Coding Projects</h1>
+        <p class="section-subtitle">Here's what I've been building. Click any project to see the code.</p>
 
-        <div class="projects-grid">
+        <!-- Filter buttons -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="python">Python</button>
+            <button class="filter-btn" data-filter="javascript">JavaScript</button>
+            <button class="filter-btn" data-filter="web">Web Dev</button>
+            <button class="filter-btn" data-filter="api">API</button>
+        </div>
+
+        <div class="projects-grid" id="projects-grid">
             <!-- Project 1 - Replace with your actual project -->
-            <div class="project-card">
-                <h3>Portfolio Website</h3>
-                <p class="project-description">Personal portfolio site built with HTML/CSS, hosted on GitHub Pages. Features responsive design and clean UI.</p>
-                <div class="tech-stack">
-                    <span>HTML5</span>
-                    <span>CSS3</span>
-                    <span>GitHub Pages</span>
+            <div class="project-card" data-category="python api">
+                <div class="project-header">
+                    <h3>Weather Dashboard API</h3>
+                    <span class="project-date">2024</span>
                 </div>
+                <p class="project-description">RESTful API that fetches weather data from OpenWeatherMap and provides forecasts. Includes caching for efficiency.</p>
+                
+                <div class="tech-stack">
+                    <span>Python</span>
+                    <span>Flask</span>
+                    <span>REST API</span>
+                    <span>Requests</span>
+                </div>
+                
+                <div class="project-highlights">
+                    <div class="highlight">✅ 500+ API calls/day</div>
+                    <div class="highlight">⚡ 50ms response time</div>
+                    <div class="highlight">📊 JSON & XML support</div>
+                </div>
+                
                 <div class="project-links">
-                    <a href="#" class="project-link">🔗 Live Demo</a>
-                    <a href="#" class="project-link">📁 GitHub Repo</a>
+                    <a href="#" class="project-link" target="_blank">📁 GitHub Repo</a>
+                    <a href="#" class="project-link" target="_blank">🔗 Live Demo</a>
                 </div>
             </div>
 
             <!-- Project 2 -->
-            <div class="project-card">
-                <h3>[Project Name 2]</h3>
-                <p class="project-description">Brief description of what this project does, the problem it solves, and any interesting challenges you overcame.</p>
-                <div class="tech-stack">
-                    <span>Python</span>
-                    <span>Flask</span>
-                    <span>MongoDB</span>
+            <div class="project-card" data-category="javascript web">
+                <div class="project-header">
+                    <h3>TaskFlow - Productivity App</h3>
+                    <span class="project-date">2024</span>
                 </div>
+                <p class="project-description">Drag-and-drop task management app with local storage, dark mode, and statistics dashboard. Built for daily productivity.</p>
+                
+                <div class="tech-stack">
+                    <span>React</span>
+                    <span>Context API</span>
+                    <span>LocalStorage</span>
+                    <span>CSS3</span>
+                </div>
+                
+                <div class="project-highlights">
+                    <div class="highlight">📱 Fully responsive</div>
+                    <div class="highlight">🌙 Dark mode toggle</div>
+                    <div class="highlight">📈 Task analytics</div>
+                </div>
+                
                 <div class="project-links">
-                    <a href="#" class="project-link">🔗 Live Demo</a>
-                    <a href="#" class="project-link">📁 GitHub Repo</a>
+                    <a href="#" class="project-link" target="_blank">📁 GitHub Repo</a>
+                    <a href="#" class="project-link" target="_blank">🔗 Live Demo</a>
                 </div>
             </div>
 
             <!-- Project 3 -->
-            <div class="project-card">
-                <h3>[Project Name 3]</h3>
-                <p class="project-description">Show off your skills! Mention the tech stack, your role, and what you learned from building this project.</p>
-                <div class="tech-stack">
-                    <span>React</span>
-                    <span>Node.js</span>
-                    <span>Express</span>
+            <div class="project-card" data-category="python web">
+                <div class="project-header">
+                    <h3>Personal Blog Platform</h3>
+                    <span class="project-date">2023</span>
                 </div>
+                <p class="project-description">Full-stack blog with user authentication, markdown support, and comment system. Features admin dashboard.</p>
+                
+                <div class="tech-stack">
+                    <span>Django</span>
+                    <span>SQLite</span>
+                    <span>Bootstrap</span>
+                    <span>Markdown</span>
+                </div>
+                
+                <div class="project-highlights">
+                    <div class="highlight">🔐 JWT authentication</div>
+                    <div class="highlight">✍️ Rich text editor</div>
+                    <div class="highlight">💬 Comment system</div>
+                </div>
+                
                 <div class="project-links">
-                    <a href="#" class="project-link">🔗 Live Demo</a>
-                    <a href="#" class="project-link">📁 GitHub Repo</a>
+                    <a href="#" class="project-link" target="_blank">📁 GitHub Repo</a>
+                    <a href="#" class="project-link" target="_blank">🔗 Live Demo</a>
                 </div>
             </div>
 
-            <!-- Add more projects as needed -->
+            <!-- Project 4 - Add as many as you want -->
+            <div class="project-card" data-category="javascript api">
+                <div class="project-header">
+                    <h3>GitHub Repository Analyzer</h3>
+                    <span class="project-date">2024</span>
+                </div>
+                <p class="project-description">Tool that analyzes any GitHub repo and generates statistics, language breakdown, and contributor insights.</p>
+                
+                <div class="tech-stack">
+                    <span>JavaScript</span>
+                    <span>GitHub API</span>
+                    <span>Chart.js</span>
+                    <span>Axios</span>
+                </div>
+                
+                <div class="project-highlights">
+                    <div class="highlight">📊 Visual statistics</div>
+                    <div class="highlight">🔍 Search any repo</div>
+                    <div class="highlight">📦 Language breakdown</div>
+                </div>
+                
+                <div class="project-links">
+                    <a href="#" class="project-link" target="_blank">📁 GitHub Repo</a>
+                    <a href="#" class="project-link" target="_blank">🔗 Live Demo</a>
+                </div>
+            </div>
         </div>
 
-        <div class="github-note">
-            <p>📦 Want to see more? Visit my <a href="https://github.com/Adam-Powley" target="_blank">GitHub Profile</a> for all my repositories.</p>
+        <!-- GitHub Stats Section -->
+        <div class="github-stats">
+            <h3>📊 My GitHub in Numbers</h3>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Public Repos</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Commits (2024)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">3+</div>
+                    <div class="stat-label">Stars Received</div>
+                </div>
+            </div>
+            <a href="https://github.com/Adam-Powley" class="github-profile-link" target="_blank">
+                🐙 View all my repositories on GitHub →
+            </a>
         </div>
     </main>
 
     <footer>
         <p>© 2026 Adam Powley | Built with HTML/CSS on GitHub Pages</p>
     </footer>
+
+    <script>
+        // Filter functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                
+                const filterValue = button.getAttribute('data-filter');
+                
+                // Filter projects
+                projectCards.forEach(card => {
+                    const categories = card.getAttribute('data-category');
+                    if (filterValue === 'all' || categories.includes(filterValue)) {
+                        card.style.display = 'block';
+                        setTimeout(() => card.style.opacity = '1', 10);
+                    } else {
+                        card.style.opacity = '0';
+                        setTimeout(() => card.style.display = 'none', 200);
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
