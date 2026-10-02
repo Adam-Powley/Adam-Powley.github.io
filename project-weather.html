@@ -20,67 +20,254 @@
 
     <main>
         <a href="projects.html" class="back-link">← Back to Projects</a>
-        
         <div class="project-detail">
+        
             <h1>Genetic Algorithm</h1>
-            
+        
             <div class="tech-icons">
-                <span class="tech-icon">🐍 Python 3.11</span>
-                <span class="tech-icon">🌊 Flask 2.3</span>
-                <span class="tech-icon">🔌 REST API</span>
-                <span class="tech-icon">📦 Redis Cache</span>
-                <span class="tech-icon">☁️ OpenWeatherMap</span>
+                <span class="tech-icon">🐍 Python</span>
+                <span class="tech-icon">🧬 Evolutionary Computation</span>
+                <span class="tech-icon">📈 Scientific Computing</span>
+                <span class="tech-icon">🕸️ Gene Regulatory Networks</span>
             </div>
-            
-            <h2>Overview</h2>
-            <p>A genetic algorithm from scratch to reproduce the results from various papers and software releases. A series of steps towards building a GA that corresponds with analytical results from dynamical systems and stochastic processes.</p>
-            
-            <h2>Key Features</h2>
-            <ul class="project-features">
-                <li>Reproduction of how GA parameters effect epochal behavior</li>
-                <li>Comparison with pymoo GA on benchmark problems</li>
-                <li>Optimization of genetic regulatory mechanisms from spatial expression</li>
-                <li>Reproducing automated design of gene regulatory mechanisms: encoding network, deterministic crowding, island distrubtion</li>
-            </ul>
-            
-            <h2>Technical Architecture</h2>
-            <div class="code-snippet">
-                <pre><code># Example API call
-GET /api/weather?city=London&units=metric
-
-Response:
-{
-  "city": "London",
-  "temperature": 15.5,
-  "conditions": "Partly cloudy",
-  "humidity": 72,
-  "wind_speed": 5.1,
-  "timestamp": "2024-01-15T14:30:00Z"
-}</code></pre>
+        
+            <!-- Introduction -->
+            <section class="research-intro">
+                <h2>Overview</h2>
+        
+                <p>
+                    This project explores the behavior of genetic algorithms
+                    through implementations from scratch, computational
+                    experiments, and comparisons with established optimization
+                    frameworks. The goal is to understand how evolutionary
+                    operators and population structure influence optimization
+                    and the emergence of complex solutions.
+                </p>
+        
+                <p>
+                    The experiments investigate relationships between fitness,
+                    mutation, selection, and population diversity, as well as
+                    the application of evolutionary optimization to gene
+                    regulatory networks. The figures below present the
+                    experimental results, with each section describing the
+                    question being investigated and the interpretation of
+                    the resulting data.
+                </p>
+            </section>
+        
+            <!-- Research questions -->
+            <section class="research-context">
+                <h2>Research Questions</h2>
+        
+                <ul class="project-features">
+                    <li>How do evolutionary parameters influence convergence
+                        and population diversity?</li>
+                    <li>How does a custom genetic algorithm compare with
+                        established optimization implementations?</li>
+                    <li>How can evolutionary processes discover gene
+                        regulatory networks capable of producing target
+                        spatial expression patterns?</li>
+                </ul>
+            </section>
+        
+            <!-- Nine figures -->
+            <section class="results-section">
+                <h2>Experimental Results</h2>
+        
+                <p class="section-intro">
+                    Each figure examines a different aspect of the evolutionary
+                    process. Together, they connect algorithmic behavior
+                    with optimization performance and emergent network structure.
+                </p>
+        
+                <div class="results-grid">
+        
+                    <article class="result-card">
+                        <img src="images/genetic-algorithm/graph-01.png"
+                             alt="Fitness across genetic algorithm generations"
+                             loading="lazy">
+                        <div class="result-content">
+                            <span class="figure-number">FIGURE 01</span>
+                            <h3>Fitness Convergence</h3>
+                            <p>
+                                Examine how the population's fitness changes
+                                over successive generations. This experiment
+                                characterizes convergence behavior and whether
+                                optimization continues to improve or reaches
+                                a plateau.
+                            </p>
+                        </div>
+                    </article>
+        
+                    <article class="result-card">
+                        <img src="images/genetic-algorithm/graph-02.png"
+                             alt="Population diversity over generations"
+                             loading="lazy">
+                        <div class="result-content">
+                            <span class="figure-number">FIGURE 02</span>
+                            <h3>Population Diversity</h3>
+                            <p>
+                                Track variation among individuals throughout
+                                evolution. Diversity measurements help
+                                characterize population homogenization and
+                                the exploration of alternative solutions.
+                            </p>
+                        </div>
+                    </article>
+        
+                    <article class="result-card">
+                        <img src="images/genetic-algorithm/graph-03.png"
+                             alt="Effect of mutation rate on optimization"
+                             loading="lazy">
+                        <div class="result-content">
+                            <span class="figure-number">FIGURE 03</span>
+                            <h3>Mutation Dynamics</h3>
+                            <p>
+                                Investigate how mutation settings affect
+                                exploration of the search space and the
+                                retention of useful genetic material.
+                                Compare the observed behavior across
+                                experimental configurations.
+                            </p>
+                        </div>
+                    </article>
+        
+                    <article class="result-card">
+                        <img src="images/genetic-algorithm/graph-04.png"
+                             alt="Selection behavior during evolution"
+                             loading="lazy">
+                        <div class="result-content">
+                            <span class="figure-number">FIGURE 04</span>
+                            <h3>Selection Pressure</h3>
+                            <p>
+                                Explore how the selection operator changes
+                                the composition of the population. Relate
+                                selection behavior to fitness differences
+                                and the persistence of candidate solutions.
+                            </p>
+                        </div>
+                    </article>
+        
+                    <article class="result-card">
+                        <img src="images/genetic-algorithm/graph-05.png"
+                             alt="Comparison of genetic algorithm benchmarks"
+                             loading="lazy">
+                        <div class="result-content">
+                            <span class="figure-number">FIGURE 05</span>
+                            <h3>Benchmark Comparison</h3>
+                            <p>
+                                Compare optimization performance against
+                                an established implementation such as pymoo.
+                                Use consistent objective functions, evaluation
+                                budgets, and experimental conditions to
+                                interpret differences in performance.
+                            </p>
+                        </div>
+                    </article>
+        
+                    <article class="result-card">
+                        <img src="images/genetic-algorithm/graph-06.png"
+                             alt="Sensitivity of optimization to algorithm parameters"
+                             loading="lazy">
+                        <div class="result-content">
+                            <span class="figure-number">FIGURE 06</span>
+                            <h3>Parameter Sensitivity</h3>
+                            <p>
+                                Examine how algorithm settings influence
+                                the resulting fitness distributions and
+                                convergence behavior. Repeated runs help
+                                distinguish systematic effects from
+                                stochastic variation.
+                            </p>
+                        </div>
+                    </article>
+        
+                    <article class="result-card">
+                        <img src="images/genetic-algorithm/graph-07.png"
+                             alt="Evolution of gene regulatory network structure"
+                             loading="lazy">
+                        <div class="result-content">
+                            <span class="figure-number">FIGURE 07</span>
+                            <h3>Network Evolution</h3>
+                            <p>
+                                Visualize changes in gene regulatory network
+                                topology as candidate networks evolve.
+                                Examine how interaction structure and
+                                regulatory parameters relate to the
+                                optimization objective.
+                            </p>
+                        </div>
+                    </article>
+        
+                    <article class="result-card">
+                        <img src="images/genetic-algorithm/graph-08.png"
+                             alt="Spatial expression pattern and target comparison"
+                             loading="lazy">
+                        <div class="result-content">
+                            <span class="figure-number">FIGURE 08</span>
+                            <h3>Spatial Expression</h3>
+                            <p>
+                                Compare simulated spatial expression with
+                                the target pattern used by the fitness
+                                function. This illustrates how the search
+                                process evaluates candidate regulatory
+                                mechanisms against a desired outcome.
+                            </p>
+                        </div>
+                    </article>
+        
+                    <article class="result-card">
+                        <img src="images/genetic-algorithm/graph-09.png"
+                             alt="Dynamical behavior of an evolved regulatory network"
+                             loading="lazy">
+                        <div class="result-content">
+                            <span class="figure-number">FIGURE 09</span>
+                            <h3>Regulatory Dynamics</h3>
+                            <p>
+                                Examine the temporal behavior of an evolved
+                                network through its simulated trajectories.
+                                Relate the observed dynamics to network
+                                structure, interaction parameters, and
+                                the stability of the resulting expression.
+                            </p>
+                        </div>
+                    </article>
+        
+                </div>
+            </section>
+        
+            <!-- Overall discussion -->
+            <section class="discussion-section">
+                <h2>Discussion</h2>
+        
+                <p>
+                    Taken together, these experiments provide a framework
+                    for studying how evolutionary operators shape the
+                    optimization process and how those processes can be
+                    applied to dynamical systems. The results also help
+                    distinguish improvements in the numerical objective
+                    from changes in the underlying structure and behavior
+                    of evolved networks.
+                </p>
+        
+                <p>
+                    The interpretation of each experiment depends on its
+                    experimental conditions, evaluation criteria, and
+                    observed variability. The figures should therefore be
+                    considered alongside their associated parameters and
+                    repeated-run results.
+                </p>
+            </section>
+        
+            <div class="project-links">
+                <a href="https://github.com/Adam-Powley/Aleph"
+                   class="btn btn-primary"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    View Source Code
+                </a>
             </div>
-            
-            <h2>Challenges & Solutions</h2>
-            <p><strong>Challenge:</strong> OpenWeatherMap's free tier has strict rate limits (60 calls/minute), which would be insufficient for multiple users.</p>
-            <p><strong>Solution:</strong> Implemented Redis caching with a 10-minute TTL. This reduced external API calls by 80% while maintaining fresh data for users.</p>
-            
-            <p><strong>Challenge:</strong> Handling different response formats (JSON vs XML) based on client preference.</p>
-            <p><strong>Solution:</strong> Used Flask's content negotiation and created separate serializers for JSON and XML output.</p>
-            
-            <h2>Results & Impact</h2>
-            <ul>
-                <li>✅ Serving 500+ requests daily with 50ms average response time</li>
-                <li>✅ 99.9% uptime over 3 months</li>
-                <li>✅ Reduced API costs by 80% through intelligent caching</li>
-                <li>✅ Used by 5+ developer projects and 2 small businesses</li>
-            </ul>
-            
-            <h2>What I Learned</h2>
-            <p>This project taught me the importance of caching strategies, API design patterns, and handling real-world rate limiting. I also improved my understanding of Flask's request/response cycle and middleware implementation.</p>
-            
-            <div class="project-links" style="margin-top: 2rem;">
-                <a href="https://github.com/Adam-Powley/weather-api" class="btn btn-primary" target="_blank">📁 View on GitHub</a>
-                <a href="#" class="btn btn-secondary" target="_blank">🔗 Try Live Demo</a>
-            </div>
+        
         </div>
     </main>
     
