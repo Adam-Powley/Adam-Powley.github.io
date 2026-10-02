@@ -91,7 +91,7 @@
                             <span class="figure-number">FIGURE 01</span>
                             <h3>Canonical</h3>
                             <p>
-                                The canonical example that the following graphs deviate from. N = 10, K = 6, M = 500, q = 0.0001.
+                                The canonical example that the following graphs deviate from. N = 10, K = 6, M = 500, q = 0.0001. Clear epochal behavior converging at 10.
                             </p>
                         </div>
                     </article>
@@ -124,7 +124,7 @@
         
                     <article class="result-card">
                         <img src="images/genetic-algorithm/1c.png"
-                             alt="Selection behavior during evolution"
+                             alt="Decrease Population after Decreasing Gene Length"
                              loading="lazy">
                         <div class="result-content">
                             <span class="figure-number">FIGURE 04</span>
@@ -137,68 +137,52 @@
         
                     <article class="result-card">
                         <img src="images/genetic-algorithm/1e.png"
-                             alt="Comparison of genetic algorithm benchmarks"
+                             alt="Increasing Mutation Rate"
                              loading="lazy">
                         <div class="result-content">
                             <span class="figure-number">FIGURE 05</span>
-                            <h3>Benchmark Comparison</h3>
+                            <h3>Increasing Mutation Rate</h3>
                             <p>
-                                Compare optimization performance against
-                                an established implementation such as pymoo.
-                                Use consistent objective functions, evaluation
-                                budgets, and experimental conditions to
-                                interpret differences in performance.
+                                Increasing Mutation rate to .0075 from .001 in Fig 1. Rougher dynamics, no epochs, no convergence.
                             </p>
                         </div>
                     </article>
         
                     <article class="result-card">
                         <img src="images/genetic-algorithm/1f.png"
-                             alt="Sensitivity of optimization to algorithm parameters"
+                             alt="Increasing Population Size after Increasing Mutation"
                              loading="lazy">
                         <div class="result-content">
                             <span class="figure-number">FIGURE 06</span>
-                            <h3>Parameter Sensitivity</h3>
+                            <h3>Increasing Population Size after Increasing Mutation</h3>
                             <p>
-                                Examine how algorithm settings influence
-                                the resulting fitness distributions and
-                                convergence behavior. Repeated runs help
-                                distinguish systematic effects from
-                                stochastic variation.
+                                Increasing population size to 7500 from 500 in Fig 5. Smoother dynamics.
                             </p>
                         </div>
                     </article>
         
                     <article class="result-card">
                         <img src="images/genetic-algorithm/1g.png"
-                             alt="Evolution of gene regulatory network structure"
+                             alt="Decreasing Population"
                              loading="lazy">
                         <div class="result-content">
                             <span class="figure-number">FIGURE 07</span>
-                            <h3>Network Evolution</h3>
+                            <h3>Decreasing Population</h3>
                             <p>
-                                Visualize changes in gene regulatory network
-                                topology as candidate networks evolve.
-                                Examine how interaction structure and
-                                regulatory parameters relate to the
-                                optimization objective.
+                                Decreasing population to 50 from 500 in Fig 1. Makes dynamics rougher while maintaining epochal behavior.
                             </p>
                         </div>
                     </article>
         
                     <article class="result-card">
                         <img src="images/genetic-algorithm/1h.png"
-                             alt="Spatial expression pattern and target comparison"
+                             alt="Raising Mutation Rate after Decreasing Population"
                              loading="lazy">
                         <div class="result-content">
                             <span class="figure-number">FIGURE 08</span>
-                            <h3>Spatial Expression</h3>
+                            <h3>Raising Mutation Rate after Decreasing Population</h3>
                             <p>
-                                Compare simulated spatial expression with
-                                the target pattern used by the fitness
-                                function. This illustrates how the search
-                                process evaluates candidate regulatory
-                                mechanisms against a desired outcome.
+                                Raising Mutation Rate to 0.005 from 0.001 in Fig 1. Volitile dynamics disrupt epochal behavior.
                             </p>
                         </div>
                     </article>
@@ -209,13 +193,9 @@
                              loading="lazy">
                         <div class="result-content">
                             <span class="figure-number">FIGURE 09</span>
-                            <h3>Regulatory Dynamics</h3>
+                            <h3>Raising Gene Length with Low Population and High Mutation</h3>
                             <p>
-                                Examine the temporal behavior of an evolved
-                                network through its simulated trajectories.
-                                Relate the observed dynamics to network
-                                structure, interaction parameters, and
-                                the stability of the resulting expression.
+                                Raising Gene Length to 15 from 6 in Fig 8. Epochal behaior returns despite noisy dynamics, very slow convergence if at all.
                             </p>
                         </div>
                     </article>
