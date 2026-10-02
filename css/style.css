@@ -462,3 +462,106 @@ footer {
     font-size: 0.875rem;
     color: #374151;
 }
+
+/* Research introduction */
+.research-intro,
+.research-context,
+.results-section,
+.discussion-section {
+    margin-top: 2.5rem;
+}
+
+.research-intro p,
+.research-context p,
+.section-intro,
+.discussion-section p {
+    max-width: 850px;
+    line-height: 1.8;
+}
+
+.section-intro {
+    margin-bottom: 2rem;
+}
+
+/* Nine-figure grid */
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Individual figure cards */
+.result-card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid rgba(128, 128, 128, 0.25);
+    border-radius: 12px;
+    background: var(--card-bg, transparent);
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.result-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.result-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    background: #ffffff;
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+
+.result-content {
+    padding: 1.25rem;
+}
+
+.figure-number {
+    display: block;
+    margin-bottom: 0.6rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    opacity: 0.65;
+}
+
+.result-content h3 {
+    margin: 0 0 0.75rem;
+    font-size: 1.15rem;
+    line-height: 1.4;
+}
+
+.result-content p {
+    margin: 0;
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+/* Tablet: two columns */
+@media (max-width: 1000px) {
+    .results-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.25rem;
+    }
+}
+
+/* Mobile: one column */
+@media (max-width: 600px) {
+    .results-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .result-card img {
+        aspect-ratio: 5 / 3;
+    }
+
+    .result-content {
+        padding: 1rem;
+    }
+}
