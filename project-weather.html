@@ -208,21 +208,18 @@
                 <h2>Discussion</h2>
         
                 <p>
-                    Taken together, these experiments provide a framework
-                    for studying how evolutionary operators shape the
-                    optimization process and how those processes can be
-                    applied to dynamical systems. The results also help
-                    distinguish improvements in the numerical objective
-                    from changes in the underlying structure and behavior
-                    of evolved networks.
+                    Taken together, these experiments provide insights into how the relationships between these fundamental evolutionary parameters effect the epochal behavior.
+                    The first experiment uses parameters for the canonical example of epochal evolution, which are modified in three seperate paths to see their impact.
                 </p>
-        
                 <p>
-                    The interpretation of each experiment depends on its
-                    experimental conditions, evaluation criteria, and
-                    observed variability. The figures should therefore be
-                    considered alongside their associated parameters and
-                    repeated-run results.
+                    Firstly, Figures 2 and 7 modify the population size from the canonical example. In Figure 2, increasing the population size generally smooths out the dynamics, while Figure 7 illustrates how decreasing population causes noisy dynamics. Population size therefor has the characteristic of controlling the stochasticity, where more members greater approximate the average behavior and less are more suseptible to stochastic noise. However, epochal behavior is still present, even if noisy.
+                    Next, experiments 3, 5, and 8 modify one parameter from experiments 2, 1, and 7 respectively, each of which disrupt the epochal behavior. In figure 3, the gene length is decreased from experiment 2, which speeds up the discovery of correct genes faster than epochs can be maintained causing monotonic increase.
+                    In figure 5 and 8, the mutation rates of the canonical example and experiment 7 are increased, creating too much noise to sustain epochs. A high mutation rate causes correct genes to be mutated faster than they can be spread among the population. In contrast to the noisy dynamics of a low population size, a high mutation rate breaks epochal behavior.
+                    Finally, experiments 4, 6, and 9 change one parameter from the previous experiments to return epochal behavior. 
+                    Experiment 4 decreases the population from experiment 3, which slows down the discovery of correct genes and brings back epochs from monotonic growth.
+                    Furthermore, Experiment 6 increases the population from experiment 5, returning epochal behavior from the noisy chaos due to the increased mutation rate. This examplifies how a balance of population size and mutation rate characterize healthy epochal evoltuion, as they both control the noise.
+                    Finally, Experiment 9 increases the gene length to return epochs, creating a larger barier to increase fitness. Since fitness increases so slowly, the selection is enough to keep the best fitness despite the incredibly noisy dynamics. 
+                    However, the point of this research is in the quantitative relationships between these parameters, and so such qualitative explanations are merely hypotheses on the observations within these figures to help guide the research.
                 </p>
             </section>
         
