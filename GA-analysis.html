@@ -1,0 +1,446 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aleph | Distributed Evolutionary Optimization</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Adam Powley</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About & Resume</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <a href="projects.html" class="back-link">← Back to Projects</a>
+
+        <div class="project-detail">
+
+            <h1>Aleph: Distributed Evolutionary Optimization</h1>
+
+            <div class="tech-icons">
+                <span class="tech-icon">🐍 Python</span>
+                <span class="tech-icon">🧬 Evolutionary Computation</span>
+                <span class="tech-icon">📊 Optimization Research</span>
+                <span class="tech-icon">🔬 Computational Experiments</span>
+            </div>
+
+            <!-- Overview -->
+            <section class="research-intro">
+                <h2>Overview</h2>
+
+                <p>
+                    Aleph is an experimental evolutionary optimization
+                    framework developed to investigate how population
+                    structure and evolutionary operators influence
+                    optimization performance.
+                </p>
+
+                <p>
+                    The project explores an alternative to conventional
+                    generational genetic algorithms through distributed
+                    populations, deterministic crowding, and migration
+                    between subpopulations. The central question is whether
+                    these mechanisms can improve the exploration of complex
+                    search spaces, particularly as problem dimensionality
+                    increases.
+                </p>
+
+                <p>
+                    Rather than assuming that a more elaborate algorithm
+                    necessarily performs better, I evaluate Aleph against
+                    established optimization implementations using
+                    controlled computational experiments.
+                </p>
+            </section>
+
+            <!-- Research questions -->
+            <section class="research-context">
+                <h2>Research Questions</h2>
+
+                <ul class="project-features">
+                    <li>
+                        Can distributed populations improve exploration
+                        compared with a conventional genetic algorithm?
+                    </li>
+                    <li>
+                        Does deterministic crowding help maintain useful
+                        population diversity during optimization?
+                    </li>
+                    <li>
+                        How do population size, migration frequency, and
+                        mutation influence convergence?
+                    </li>
+                    <li>
+                        Does the performance of distributed evolutionary
+                        strategies change with problem dimensionality?
+                    </li>
+                    <li>
+                        Under what conditions can the additional complexity
+                        of Aleph provide a practical advantage?
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Algorithm architecture -->
+            <section class="research-context">
+                <h2>Algorithm Architecture</h2>
+
+                <p>
+                    Aleph investigates evolutionary search through
+                    interacting subpopulations. Each population evolves
+                    independently between migration events, allowing
+                    different regions of the search space to be explored.
+                </p>
+
+                <div class="results-grid">
+
+                    <article class="result-card">
+                        <img
+                            src="images/aleph-optimization/island-architecture.png"
+                            alt="Diagram of the distributed island population architecture"
+                            loading="lazy">
+
+                        <div class="result-content">
+                            <span class="figure-number">FIGURE 01</span>
+                            <h3>Island Model</h3>
+
+                            <p>
+                                The population is divided into smaller
+                                subpopulations, or islands. Each island
+                                evolves independently, with migration
+                                allowing individuals to move between
+                                populations.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="result-card">
+                        <img
+                            src="images/aleph-optimization/crowding-architecture.png"
+                            alt="Diagram illustrating deterministic crowding"
+                            loading="lazy">
+
+                        <div class="result-content">
+                            <span class="figure-number">FIGURE 02</span>
+                            <h3>Deterministic Crowding</h3>
+
+                            <p>
+                                Offspring compete with similar parent
+                                individuals for survival. This creates
+                                localized competition and is intended to
+                                help preserve distinct regions of the
+                                population.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="result-card">
+                        <img
+                            src="images/aleph-optimization/evolutionary-process.png"
+                            alt="Overview of the evolutionary optimization process"
+                            loading="lazy">
+
+                        <div class="result-content">
+                            <span class="figure-number">FIGURE 03</span>
+                            <h3>Evolutionary Operators</h3>
+
+                            <p>
+                                Mutation, reproduction, selection, and
+                                migration determine how candidate solutions
+                                change and compete throughout the
+                                optimization process.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- Experimental methodology -->
+            <section class="research-context">
+                <h2>Experimental Methodology</h2>
+
+                <p>
+                    To evaluate the algorithm, I conducted benchmark
+                    experiments comparing Aleph with the genetic algorithm
+                    implementation provided by pymoo. The experiments
+                    examine optimization performance across benchmark
+                    functions and different problem dimensionalities.
+                </p>
+
+                <p>
+                    A central consideration was ensuring that comparisons
+                    used a consistent computational budget. Rather than
+                    comparing algorithms solely by generation count,
+                    configurations were selected around a fixed number of
+                    objective-function evaluations.
+                </p>
+
+                <p>
+                    Population sizes and other algorithm parameters were
+                    investigated before the final comparisons. Independent
+                    runs with different random seeds were used to examine
+                    variation in performance rather than relying on a
+                    single optimization trajectory.
+                </p>
+
+                <h3>Experimental considerations</h3>
+
+                <ul class="project-features">
+                    <li>
+                        Benchmark functions from the SciPy global
+                        optimization benchmark suite.
+                    </li>
+                    <li>
+                        Comparisons across multiple problem dimensions,
+                        including 10-dimensional and 50-dimensional
+                        problems.
+                    </li>
+                    <li>
+                        Fixed objective-function evaluation budgets for
+                        computationally fair comparisons.
+                    </li>
+                    <li>
+                        Multiple independent runs to measure variation
+                        between stochastic optimization trajectories.
+                    </li>
+                    <li>
+                        Analysis of convergence, final error, and
+                        performance variability.
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Results -->
+            <section class="results-section">
+                <h2>Experimental Results</h2>
+
+                <p class="section-intro">
+                    The experiments compare the convergence behaviour
+                    and final optimization performance of Aleph and
+                    pymoo. The results show that additional population
+                    structure does not automatically produce better
+                    optimization performance. However, performance
+                    varies across benchmark functions and dimensionalities,
+                    with Aleph demonstrating competitive results in
+                    some higher-dimensional experiments.
+                </p>
+
+                <div class="results-grid">
+
+                    <article class="result-card">
+                        <img
+                            src="images/aleph-optimization/convergence-10d.png"
+                            alt="Convergence comparison between Aleph and pymoo on 10-dimensional benchmarks"
+                            loading="lazy">
+
+                        <div class="result-content">
+                            <span class="figure-number">FIGURE 04</span>
+                            <h3>10-Dimensional Convergence</h3>
+
+                            <p>
+                                Comparison of optimization error against
+                                objective-function evaluations in
+                                lower-dimensional search spaces. These
+                                experiments establish a baseline for
+                                comparing the algorithms.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="result-card">
+                        <img
+                            src="images/aleph-optimization/convergence-50d.png"
+                            alt="Convergence comparison between Aleph and pymoo on 50-dimensional benchmarks"
+                            loading="lazy">
+
+                        <div class="result-content">
+                            <span class="figure-number">FIGURE 05</span>
+                            <h3>50-Dimensional Convergence</h3>
+
+                            <p>
+                                Higher-dimensional experiments reveal
+                                differences in convergence behaviour.
+                                Aleph is competitive with pymoo on some
+                                problems, and outperforms it in selected
+                                cases.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="result-card">
+                        <img
+                            src="images/aleph-optimization/final-error-distributions.png"
+                            alt="Final optimization error distributions across independent runs"
+                            loading="lazy">
+
+                        <div class="result-content">
+                            <span class="figure-number">FIGURE 06</span>
+                            <h3>Final Error Distributions</h3>
+
+                            <p>
+                                Distributions of final optimization errors
+                                across independent runs. These comparisons
+                                help distinguish typical performance from
+                                variability between runs.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="result-card">
+                        <img
+                            src="images/aleph-optimization/performance-heatmap.png"
+                            alt="Heatmap comparing algorithm performance across benchmark functions and dimensions"
+                            loading="lazy">
+
+                        <div class="result-content">
+                            <span class="figure-number">FIGURE 07</span>
+                            <h3>Performance Across Benchmarks</h3>
+
+                            <p>
+                                A broader comparison across benchmark
+                                functions and dimensionalities. This
+                                overview helps identify where each
+                                algorithm performs comparatively well.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="result-card">
+                        <img
+                            src="images/aleph-optimization/average-error.png"
+                            alt="Comparison of average final optimization errors"
+                            loading="lazy">
+
+                        <div class="result-content">
+                            <span class="figure-number">FIGURE 08</span>
+                            <h3>Average Final Error</h3>
+
+                            <p>
+                                Mean and median final errors provide
+                                complementary measures of optimization
+                                performance across independent trials.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="result-card">
+                        <img
+                            src="images/aleph-optimization/variability.png"
+                            alt="Comparison of optimization result variability"
+                            loading="lazy">
+
+                        <div class="result-content">
+                            <span class="figure-number">FIGURE 09</span>
+                            <h3>Performance Variability</h3>
+
+                            <p>
+                                Variation between independent runs
+                                illustrates the consistency of each
+                                optimization strategy and the influence
+                                of stochastic search.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- Discussion -->
+            <section class="discussion-section">
+                <h2>Discussion</h2>
+
+                <p>
+                    The benchmark results demonstrate that increasing
+                    algorithmic complexity does not necessarily improve
+                    optimization performance. Pymoo's comparatively
+                    straightforward genetic algorithm outperforms Aleph
+                    on many of the tested problems, providing a strong
+                    baseline for evaluating the proposed population
+                    architecture.
+                </p>
+
+                <p>
+                    However, the results are not uniform across all
+                    experiments. In some 50-dimensional problems, Aleph
+                    achieves comparable or better final errors. This
+                    suggests that the relationship between population
+                    distribution, search-space dimensionality, and
+                    optimization performance warrants further
+                    investigation.
+                </p>
+
+                <p>
+                    The additional mechanisms in Aleph also introduce
+                    trade-offs. Distributed populations and migration
+                    create more opportunities for independent exploration,
+                    but they introduce additional parameters and
+                    computational overhead. Their effectiveness depends
+                    on how these mechanisms interact with the underlying
+                    optimization problem.
+                </p>
+
+                <p>
+                    An important outcome of this project is therefore
+                    not simply whether Aleph outperforms an established
+                    implementation, but an empirical understanding of
+                    where its design choices are useful and where they
+                    are not. The results provide a foundation for further
+                    investigation into population structure, migration,
+                    and evolutionary search.
+                </p>
+            </section>
+
+            <!-- Reproducibility -->
+            <section class="research-context">
+                <h2>Reproducibility and Further Work</h2>
+
+                <p>
+                    Aleph is an ongoing experimental project. The source
+                    code and benchmarking scripts are available for
+                    inspection, alongside the configurations used to
+                    investigate its performance.
+                </p>
+
+                <p>
+                    Further work could examine the sensitivity of the
+                    results to migration frequency, island population
+                    size, and crowding strategies. Additional experiments
+                    would also help establish whether the competitive
+                    higher-dimensional results represent a consistent
+                    advantage or are specific to individual benchmark
+                    functions.
+                </p>
+            </section>
+
+            <!-- Project links -->
+            <div class="project-links">
+                <a
+                    href="https://github.com/Adam-Powley/Aleph"
+                    class="btn btn-primary"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    View Source Code
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 Adam Powley | Built with HTML/CSS on GitHub Pages</p>
+    </footer>
+
+</body>
+</html>
