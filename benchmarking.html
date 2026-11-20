@@ -40,20 +40,11 @@
                 <h2>Overview</h2>
 
                 <p>
-                    Aleph is an experimental evolutionary optimization
-                    framework developed to investigate how population
-                    structure and evolutionary operators influence
-                    optimization performance.
+                    Aleph is an evolutionary global optimization algorithm built to measure how more complex implementations of evolutionary operators and population structure affect algorithm performance. 
                 </p>
 
                 <p>
-                    The project explores an alternative to conventional
-                    generational genetic algorithms through distributed
-                    populations, deterministic crowding, and migration
-                    between subpopulations. The central question is whether
-                    these mechanisms can improve the exploration of complex
-                    search spaces, particularly as problem dimensionality
-                    increases.
+                    In particular, aleph implements deterministic crowding and island distribution, which add complexity to a standard genetic algorithm. This research primarily addresses how the performances of various algorithm designs compare across various benchmark problems as problem dimensionality increases. As a baseline, aleph performances are compared with an established implementation from pymoo.
                 </p>
 
                 <p>
@@ -70,24 +61,16 @@
 
                 <ul class="project-features">
                     <li>
-                        Can distributed populations improve exploration
-                        compared with a conventional genetic algorithm?
+                        Does deterministic crowding out perform fitness proportionate selection as a selection operator?
                     </li>
                     <li>
-                        Does deterministic crowding help maintain useful
-                        population diversity during optimization?
+                        Does confining the populations ability to reproduce to isolated islands with periodic migration improve exploration over the solution space?
                     </li>
                     <li>
-                        How do population size, migration frequency, and
-                        mutation influence convergence?
+                        What are the optimal values for population size, mutation rate, migration rate, as well as island topology, and how do they differ between evolution strategies?
                     </li>
                     <li>
-                        Does the performance of distributed evolutionary
-                        strategies change with problem dimensionality?
-                    </li>
-                    <li>
-                        Under what conditions can the additional complexity
-                        of Aleph provide a practical advantage?
+                        Under which benchmark problems and which dimensionalities, does island distribution do better or worse?
                     </li>
                 </ul>
             </section>
