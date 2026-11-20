@@ -155,27 +155,7 @@
                 <h2>Experimental Methodology</h2>
 
                 <p>
-                    To evaluate the algorithm, I conducted benchmark
-                    experiments comparing Aleph with the genetic algorithm
-                    implementation provided by pymoo. The experiments
-                    examine optimization performance across benchmark
-                    functions and different problem dimensionalities.
-                </p>
-
-                <p>
-                    A central consideration was ensuring that comparisons
-                    used a consistent computational budget. Rather than
-                    comparing algorithms solely by generation count,
-                    configurations were selected around a fixed number of
-                    objective-function evaluations.
-                </p>
-
-                <p>
-                    Population sizes and other algorithm parameters were
-                    investigated before the final comparisons. Independent
-                    runs with different random seeds were used to examine
-                    variation in performance rather than relying on a
-                    single optimization trajectory.
+                    The performance of aleph is compared and contrasted against the simplest genetic algorithm implementation from pymoo on various benchmarks accessible through scipy. Five benchmark problems shed light on the relative strengths and weakness of each algorithm confronting different shapes in solution space: Sphere, Ackley, Rastrigin, Griewank, and Rosenbrock. Furthermore, each benchmark problem tests each algorithm across 10, 30, and 50 dimensional solution space, sizing up the how performances comparatively change as problems grow more complex. To fairly compare each algorithm, a fixed number of calls to the objective function is set at 40,000, and the relative distribution of these calls across population size and number of generations is calculated for each algorithm to optimize its performance. Sliding along the scale of a small population with many generations towards a large population with few generations, pymoo uses a population of 200 members over 200 generations, while aleph with island distribution uses a population of 40 members across 1000 generations. Furthermore, the mutation rate is optimized for each algorithm and the island distribution is optimized across 5 different network topologies and various migration intervals. For each benchmark and each dimensionality, 30 runs are performed per algorithm to determine statistical distribution of convergence and final error.
                 </p>
 
                 <h3>Experimental considerations</h3>
