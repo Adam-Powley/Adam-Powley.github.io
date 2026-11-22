@@ -184,10 +184,8 @@
 
                             <p>
                                 Comparison of optimization error against
-                                objective-function evaluations in
-                                lower-dimensional search spaces. These
-                                experiments establish a baseline for
-                                comparing the algorithms.
+                                objective-function evaluations for pymoo and aleph, including aleph without Island Ditribution (Crowding) and without Crowding (GA).
+                                Plots a-o display each benchmark down the rows with each dimensionality across the colums.
                             </p>
                         </div>
                     </article>
@@ -203,11 +201,7 @@
                             <h3>Relative Performance</h3>
 
                             <p>
-                                Higher-dimensional experiments reveal
-                                differences in convergence behaviour.
-                                Aleph is competitive with pymoo on some
-                                problems, and outperforms it in selected
-                                cases.
+                                Heat map of the relative performance of aleph against pymoo, using the median of the log ratio of their final errors across each experiment.
                             </p>
                         </div>
                     </article>
@@ -224,9 +218,7 @@
 
                             <p>
                                 Distributions of final optimization errors
-                                across independent runs. These comparisons
-                                help distinguish typical performance from
-                                variability between runs.
+                                across independent runs, contrasting the variability around the median best errors.
                             </p>
                         </div>
                     </article>
@@ -242,10 +234,8 @@
                             <h3>Performance Across Benchmarks</h3>
 
                             <p>
-                                A broader comparison across benchmark
-                                functions and dimensionalities. This
-                                overview helps identify where each
-                                algorithm performs comparatively well.
+                                The results of paired t-tests for the final error difference bewteen algorithms accross experiments, plotting 95% confidence intervals.
+                                Blue and red experiments significantly favor pymoo and aleph respectively, while grey experiments show no significantly difference after using Holm correction for this family of t-tests.
                             </p>
                         </div>
                     </article>
