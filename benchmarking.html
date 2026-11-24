@@ -247,45 +247,8 @@
             <section class="discussion-section">
                 <h2>Discussion</h2>
 
-                <p>
-                    The benchmark results demonstrate that increasing
-                    algorithmic complexity does not necessarily improve
-                    optimization performance. Pymoo's comparatively
-                    straightforward genetic algorithm outperforms Aleph
-                    on many of the tested problems, providing a strong
-                    baseline for evaluating the proposed population
-                    architecture.
-                </p>
-
-                <p>
-                    However, the results are not uniform across all
-                    experiments. In some 50-dimensional problems, Aleph
-                    achieves comparable or better final errors. This
-                    suggests that the relationship between population
-                    distribution, search-space dimensionality, and
-                    optimization performance warrants further
-                    investigation.
-                </p>
-
-                <p>
-                    The additional mechanisms in Aleph also introduce
-                    trade-offs. Distributed populations and migration
-                    create more opportunities for independent exploration,
-                    but they introduce additional parameters and
-                    computational overhead. Their effectiveness depends
-                    on how these mechanisms interact with the underlying
-                    optimization problem.
-                </p>
-
-                <p>
-                    An important outcome of this project is therefore
-                    not simply whether Aleph outperforms an established
-                    implementation, but an empirical understanding of
-                    where its design choices are useful and where they
-                    are not. The results provide a foundation for further
-                    investigation into population structure, migration,
-                    and evolutionary search.
-                </p>
+                The benchmark results demonstrate that aleph does not necessarily improve over the design of pymoo, despite the added complexity of population structure. The convergence trajectories differ between these two algorithms in Figure 4, especially as dimensionality increases. In 10 dimensional problems (a, d, g, j, m), the trajectories overlap considerably, with pymoo often riding just below aleph. However, in almost all other experiments in dimensions 30 and 50 (columns b, c), aleph initially converges more rapidly before pymoo closes the gap later on. In most experiments, this initial rapid convergence appears to correspond with the crowding implementation rather than the island.
+Furthermore, Figure 5 demonstrates that, despite generally being less favorable, gets consistently better as dimensionality increases, relative to pymoo. Aleph does particularly poorly in Rastrigin and better in Rosenbrock. The Sphere benchmark is notable as the 10D problem is aleph’s second worst, yet the 50D is the only case that Aleph outperforms pymoo (Figure 7). With the exception of the 10D sphere, aleph is better at the unimodal convergence in Sphere and Rosenbrock than with the multimodal benchmarks. Furthermore, aleph’s error in each experiment corresponds closely with the variance across runs, having more variability on the lower dimensional problems that it did worse in (Figure 6). Since pymoo outperforms aleph in every experiment except the 50D, besides Ackley01 (Figure 7), Aleph shows promise to potentially do better at increasingly complex problems, which future work may elucidate.
             </section>
 
             <!-- Reproducibility -->
