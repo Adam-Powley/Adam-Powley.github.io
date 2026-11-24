@@ -44,7 +44,7 @@
                 </p>
 
                 <p>
-                    In particular, aleph implements deterministic crowding and island distribution, which add complexity to a standard genetic algorithm. This research primarily addresses how the performances of various algorithm designs compare across various benchmark problems as problem dimensionality increases. As a baseline, aleph performances are compared with an established implementation from pymoo.
+                    In particular, Alpeh implements deterministic crowding and island distribution, which add complexity to a standard genetic algorithm. This research primarily addresses how the performances of various algorithm designs compare across various benchmark problems as problem dimensionality increases. As a baseline, Alpeh performances are compared with an established implementation from Pymoo.
                 </p>
 
                 <p>
@@ -90,7 +90,7 @@
 
                     <article class="result-card">
                         <img
-                            src="images/aleph-optimization/island-architecture.png"
+                            src="images/Alpeh-optimization/island-architecture.png"
                             alt="Diagram of the distributed island population architecture"
                             loading="lazy">
 
@@ -110,7 +110,7 @@
 
                     <article class="result-card">
                         <img
-                            src="images/aleph-optimization/crowding-architecture.png"
+                            src="images/Alpeh-optimization/crowding-architecture.png"
                             alt="Diagram illustrating deterministic crowding"
                             loading="lazy">
 
@@ -130,7 +130,7 @@
 
                     <article class="result-card">
                         <img
-                            src="images/aleph-optimization/evolutionary-process.png"
+                            src="images/Alpeh-optimization/evolutionary-process.png"
                             alt="Overview of the evolutionary optimization process"
                             loading="lazy">
 
@@ -155,7 +155,7 @@
                 <h2>Experimental Methodology</h2>
 
                 <p>
-                    The performance of aleph is compared and contrasted against the simplest genetic algorithm implementation from pymoo on various benchmarks accessible through scipy. Five benchmark problems shed light on the relative strengths and weakness of each algorithm confronting different shapes in solution space: Sphere, Ackley, Rastrigin, Griewank, and Rosenbrock. Furthermore, each benchmark problem tests each algorithm across 10, 30, and 50 dimensional solution space, sizing up the how performances comparatively change as problems grow more complex. To fairly compare each algorithm, a fixed number of calls to the objective function is set at 40,000, and the relative distribution of these calls across population size and number of generations is calculated for each algorithm to optimize its performance. Sliding along the scale of a small population with many generations towards a large population with few generations, pymoo uses a population of 200 members over 200 generations, while aleph with island distribution uses a population of 40 members across 1000 generations. Furthermore, the mutation rate is optimized for each algorithm and the island distribution is optimized across 5 different network topologies and various migration intervals. For each benchmark and each dimensionality, 30 runs are performed per algorithm to determine statistical distribution of convergence and final error.
+                    The performance of Alpeh is compared and contrasted against the simplest genetic algorithm implementation from Pymoo on various benchmarks accessible through scipy. Five benchmark problems shed light on the relative strengths and weakness of each algorithm confronting different shapes in solution space: Sphere, Ackley, Rastrigin, Griewank, and Rosenbrock. Furthermore, each benchmark problem tests each algorithm across 10, 30, and 50 dimensional solution space, sizing up the how performances comparatively change as problems grow more complex. To fairly compare each algorithm, a fixed number of calls to the objective function is set at 40,000, and the relative distribution of these calls across population size and number of generations is calculated for each algorithm to optimize its performance. Sliding along the scale of a small population with many generations towards a large population with few generations, Pymoo uses a population of 200 members over 200 generations, while Alpeh with island distribution uses a population of 40 members across 1000 generations. Furthermore, the mutation rate is optimized for each algorithm and the island distribution is optimized across 5 different network topologies and various migration intervals. For each benchmark and each dimensionality, 30 runs are performed per algorithm to determine statistical distribution of convergence and final error.
                 </p>
 
             </section>
@@ -165,9 +165,9 @@
                 <h2>Experimental Results</h2>
 
                 <p class="section-intro">
-                    The experiments compare the ability of aleph and pymoo to find optimal solutions to a variety of benchmark problems.
-                    Aleph's noteable population structure did not provide a meaningful improvement over pymoo, as pymoo managed to significantly outperform aleph in the majority of experiments.
-                    However, Aleph demenstrated competitive results as the dimensionality of each problems increased, significantly outperforming pymoo in the 50 dimensional sphere.
+                    The experiments compare the ability of Alpeh and Pymoo to find optimal solutions to a variety of benchmark problems.
+                    Aleph's noteable population structure did not provide a meaningful improvement over Pymoo, as Pymoo managed to significantly outperform Alpeh in the majority of experiments.
+                    However, Aleph demenstrated competitive results as the dimensionality of each problems increased, significantly outperforming Pymoo in the 50 dimensional Sphere.
                 </p>
 
                 <div class="results-grid">
@@ -175,7 +175,7 @@
                     <article class="result-card">
                         <img
                             src="images/benchmarking/01_convergence/combined_convergence_5x3.png"
-                            alt="Convergence comparison between Aleph and pymoo on 10-dimensional benchmarks"
+                            alt="Convergence comparison between Aleph and Pymoo on 10-dimensional benchmarks"
                             loading="lazy">
 
                         <div class="result-content">
@@ -184,7 +184,7 @@
 
                             <p>
                                 Comparison of optimization error against
-                                objective-function evaluations for pymoo and aleph, including aleph without Island Ditribution (Crowding) and without Crowding (GA).
+                                objective-function evaluations for Pymoo and Alpeh, including Alpeh without Island Ditribution (Crowding) and without Crowding (GA).
                                 Plots a-o display each benchmark down the rows with each dimensionality across the colums.
                             </p>
                         </div>
@@ -193,7 +193,7 @@
                     <article class="result-card">
                         <img
                             src="images/benchmarking/02_relative_performance/Aleph_Island_relative_heatmap.png"
-                            alt="Convergence comparison between Aleph and pymoo on 50-dimensional benchmarks"
+                            alt="Convergence comparison between Aleph and Pymoo on 50-dimensional benchmarks"
                             loading="lazy">
 
                         <div class="result-content">
@@ -201,14 +201,14 @@
                             <h3>Relative Performance</h3>
 
                             <p>
-                                Heat map of the relative performance of aleph against pymoo, using the median of the log ratio of their final errors across each experiment.
+                                Heat map of the relative performance of Alpeh against Pymoo, using the median of the log ratio of their final errors across each experiment.
                             </p>
                         </div>
                     </article>
 
                     <article class="result-card">
                         <img
-                            src="images/benchmarking/07_final_distributions_pymoo_vs_island/final_error_distributions.png"
+                            src="images/benchmarking/07_final_distributions_Pymoo_vs_island/final_error_distributions.png"
                             alt="Final optimization error distributions across independent runs"
                             loading="lazy">
 
@@ -235,7 +235,7 @@
 
                             <p>
                                 The results of paired t-tests for the final error difference bewteen algorithms accross experiments, plotting 95% confidence intervals.
-                                Blue and red experiments significantly favor pymoo and aleph respectively, while grey experiments show no significantly difference after using Holm correction for this family of t-tests.
+                                Blue and red experiments significantly favor Pymoo and Alpeh respectively, while grey experiments show no significantly difference after using Holm correction for this family of t-tests.
                             </p>
                         </div>
                     </article>
@@ -247,8 +247,8 @@
             <section class="discussion-section">
                 <h2>Discussion</h2>
 
-                The benchmark results demonstrate that aleph does not necessarily improve over the design of pymoo, despite the added complexity of population structure. The convergence trajectories differ between these two algorithms in Figure 4, especially as dimensionality increases. In 10 dimensional problems (a, d, g, j, m), the trajectories overlap considerably, with pymoo often riding just below aleph. However, in almost all other experiments in dimensions 30 and 50 (columns b, c), aleph initially converges more rapidly before pymoo closes the gap later on. In most experiments, this initial rapid convergence appears to correspond with the crowding implementation rather than the island.
-Furthermore, Figure 5 demonstrates that, despite generally being less favorable, gets consistently better as dimensionality increases, relative to pymoo. Aleph does particularly poorly in Rastrigin and better in Rosenbrock. The Sphere benchmark is notable as the 10D problem is aleph’s second worst, yet the 50D is the only case that Aleph outperforms pymoo (Figure 7). With the exception of the 10D sphere, aleph is better at the unimodal convergence in Sphere and Rosenbrock than with the multimodal benchmarks. Furthermore, aleph’s error in each experiment corresponds closely with the variance across runs, having more variability on the lower dimensional problems that it did worse in (Figure 6). Since pymoo outperforms aleph in every experiment except the 50D, besides Ackley01 (Figure 7), Aleph shows promise to potentially do better at increasingly complex problems, which future work may elucidate.
+                The benchmark results demonstrate that Alpeh does not necessarily improve over the design of Pymoo, despite the added complexity of population structure. The convergence trajectories differ between these two algorithms in Figure 4, especially as dimensionality increases. In 10 dimensional problems (a, d, g, j, m), the trajectories overlap considerably, with Pymoo often riding just below Alpeh. However, in almost all other experiments in dimensions 30 and 50 (columns b, c), Alpeh initially converges more rapidly before Pymoo closes the gap later on. In most experiments, this initial rapid convergence appears to correspond with the crowding implementation rather than the island.
+Furthermore, Figure 5 demonstrates that, despite generally being less favorable, gets consistently better as dimensionality increases, relative to Pymoo. Aleph does particularly poorly in Rastrigin and better in Rosenbrock. The Sphere benchmark is notable as the 10D problem is Alpeh’s second worst, yet the 50D is the only case that Aleph outperforms Pymoo (Figure 7). With the exception of the 10D Sphere, Alpeh is better at the unimodal convergence in Sphere and Rosenbrock than with the multimodal benchmarks. Furthermore, Alpeh’s error in each experiment corresponds closely with the variance across runs, having more variability on the lower dimensional problems that it did worse in (Figure 6). Since Pymoo outperforms Alpeh in every experiment except the 50D, besides Ackley01 (Figure 7), Aleph shows promise to potentially do better at increasingly complex problems, which future work may elucidate.
             </section>
 
             <!-- Reproducibility -->
@@ -256,20 +256,7 @@ Furthermore, Figure 5 demonstrates that, despite generally being less favorable,
                 <h2>Reproducibility and Further Work</h2>
 
                 <p>
-                    Aleph is an ongoing experimental project. The source
-                    code and benchmarking scripts are available for
-                    inspection, alongside the configurations used to
-                    investigate its performance.
-                </p>
-
-                <p>
-                    Further work could examine the sensitivity of the
-                    results to migration frequency, island population
-                    size, and crowding strategies. Additional experiments
-                    would also help establish whether the competitive
-                    higher-dimensional results represent a consistent
-                    advantage or are specific to individual benchmark
-                    functions.
+                    Aleph is an ongoing project. The source code behind Aleph’s implementation and benchmark testing are publicly available on GitHub. Future work could further examine the experiments performed here in greater dimensions to see if Aleph continues to improve over Pymoo. Furthermore, next steps could examine how different topologies and migration parameters of the island distribution perform on various problem types. 
                 </p>
             </section>
 
